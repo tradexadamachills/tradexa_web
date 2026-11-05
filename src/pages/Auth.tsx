@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { useAuth } from "../auth";
 import { Brand } from "../components/ui";
-import { errorMessage, invoke } from "../lib/client";
+import { errorMessage } from "../lib/client";
 import { DocumentUpload } from "../components/DocumentUpload";
 import { savePin, verifyPin } from "../lib/pin";
 export function AuthScreen() {
@@ -406,17 +406,7 @@ export function VerificationOnboarding() {
 export function VerificationPanel() {
   const auth = useAuth(),
     [busy, setBusy] = useState(false),
-    [error, setError] = useState(""),
-    [phone, setPhone] = useState(""),
-    [phoneCode, setPhoneCode] = useState(""),
-    [sent, setSent] = useState(false),
-    [verified, setVerified] = useState(false),
-    [cooldown, setCooldown] = useState(0);
-  useEffect(() => {
-    if (cooldown <= 0) return;
-    const timer = setTimeout(() => setCooldown(cooldown - 1), 1000);
-    return () => clearTimeout(timer);
-  }, [cooldown]);
+    [error, setError] = useState("");
   useEffect(() => {
     if (auth.phase !== "verification") return;
     const timer = setInterval(() => void auth.refresh(true), 20000);
@@ -478,96 +468,14 @@ export function VerificationPanel() {
           </Link>
         )}
       </div>
-      <details className="panel contact-panel">
-        <summary>
-          <Mail size={18} /> Add a verified WhatsApp contact{" "}
-          <span>Optional</span>
-        </summary>
-        <p>
-          This is an additional contact method, not a replacement for email or
-          identity checks.
-        </p>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            void run(async () => {
-              let device = localStorage.getItem("tradexa.device");
-              if (!device) {
-                device = crypto.randomUUID();
-                localStorage.setItem("tradexa.device", device);
-              }
-              const data = await invoke<{ status: string }>("whatsapp-otp", {
-                action: sent ? "verify" : "request",
-                phone,
-                ...(sent ? { code: phoneCode } : {}),
-                device_id: device,
-              });
-              if (data.status === "sent") {
-                setSent(true);
-                setCooldown(60);
-              } else if (data.status === "verified") {
-                setVerified(true);
-              }
-            });
-          }}
-        >
-          <label htmlFor="whatsapp">Phone number including country code</label>
-          <input
-            id="whatsapp"
-            type="tel"
-            placeholder="+923001234567"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            disabled={sent}
-            required
-            pattern="\+[1-9][0-9]{7,14}"
-          />
-          {sent && (
-            <>
-              <label htmlFor="whatsapp-code">Six-digit WhatsApp code</label>
-              <input
-                id="whatsapp-code"
-                value={phoneCode}
-                maxLength={6}
-                inputMode="numeric"
-                onChange={(e) =>
-                  setPhoneCode(e.target.value.replace(/\D/g, ""))
-                }
-              />
-            </>
-          )}
-          <button className="button full" disabled={busy || verified}>
-            {verified
-              ? "Contact verified"
-              : sent
-                ? "Verify code"
-                : "Send WhatsApp code"}
-          </button>
-          {sent && !verified && (
-            <button
-              className="text-button"
-              type="button"
-              disabled={busy || cooldown > 0}
-              onClick={() =>
-                void run(async () => {
-                  await invoke("whatsapp-otp", { action: "request", phone });
-                  setCooldown(60);
-                })
-              }
-            >
-              {cooldown > 0 ? `Resend in ${cooldown}s` : "Resend code"}
-            </button>
-          )}
-        </form>
-      </details>
       {error && (
         <p className="form-error" role="alert">
           {error}
         </p>
       )}
       <p className="verification-footnote">
-        <LockKeyhole size={14} /> Documents stay in the provider’s secure flow.
-        Tradexa retains the verification reference and review decision.
+        <LockKeyhole size={14} /> Your documents are stored encrypted and are
+        seen only by authorized Tradexa administrators.
       </p>
     </>
   );
