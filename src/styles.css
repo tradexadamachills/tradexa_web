@@ -3,7 +3,7 @@
   color: #030407;
   background: #f7f8fb;
   font-synthesis: none;
-  font-weight: 400;
+  font-weight: 500;
   --bg: #f7f8fb;
   --surface: #f2f4f9;
   --line: #eceff4;
@@ -89,7 +89,7 @@ html {
   align-items: center;
   gap: 9px;
   font-family: Manrope, sans-serif;
-  font-size: 28px;
+  font-size: 31px;
   font-weight: 800;
   letter-spacing: -1.6px;
   flex-shrink: 0;
@@ -110,16 +110,16 @@ html {
 .eyebrow,
 .micro,
 .nav-label {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 1.9px;
-  font-weight: 600;
+  font-weight: 700;
   color: #273249;
 }
 .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 2px;
 }
 .button {
@@ -131,8 +131,8 @@ html {
   color: #000000;
   padding: 16px 23px;
   border-radius: 8px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   min-height: 49px;
   box-shadow: 0 4px 18px #3061cf1a;
   transition:
@@ -144,7 +144,7 @@ html {
   transform: translateY(-1px);
 }
 .button-small {
-  font-size: 12px;
+  font-size: 16px;
   padding: 12px 17px;
   min-height: 41px;
   gap: 14px;
@@ -166,8 +166,8 @@ html {
   align-items: center;
   gap: 9px;
   color: #061437;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
 .text-link:hover {
   color: #000000;
@@ -176,7 +176,7 @@ html {
   background: none;
   color: #004aff;
   padding: 10px 0;
-  font-size: 12px;
+  font-size: 16px;
 }
 .icon-button {
   display: inline-flex;
@@ -204,13 +204,13 @@ html {
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  font-size: 10px;
+  font-size: 14px;
   padding: 5px 9px;
   background: #ebeef377;
   border: 1px solid #8a93a422;
   color: #27303f;
   border-radius: 5px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .badge-green {
   background: #f2f8f6;
@@ -274,7 +274,7 @@ html {
   width: 37px;
   height: 37px;
   font-family: Manrope, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   border-radius: 11px;
   flex-shrink: 0;
   background: #e9ecf3;
@@ -293,13 +293,13 @@ html {
 .asset-icon.gold {
   color: #d3a92c;
   background: #f3f1ec77;
-  font-size: 14px;
+  font-size: 18px;
   border: 1px solid #a9996b22;
 }
 .asset-icon.silver {
   color: #1a2028;
   background: #e7eaee77;
-  font-size: 13px;
+  font-size: 16px;
 }
 .asset-icon.green {
   color: #234d3d;
@@ -312,15 +312,15 @@ html {
   padding: 22px;
 }
 .section-title h2 {
-  font-size: 35px;
+  font-size: 39px;
   line-height: 1.27;
   letter-spacing: -1.4px;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 13px;
 }
 .section-title p {
   color: #596374;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.9;
   max-width: 410px;
   margin-top: 15px;
@@ -333,19 +333,19 @@ html {
   margin-bottom: 27px;
 }
 .page-heading .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 1.6px;
   color: #607089;
   margin-bottom: 10px;
 }
 .page-heading h1 {
-  font-size: 27px;
+  font-size: 30px;
   letter-spacing: -0.9px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .page-heading p {
   color: #5a6779;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.8;
   margin-top: 9px;
 }
@@ -359,15 +359,15 @@ html {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 10px;
+  font-size: 14px;
   color: #2c394b;
 }
 .card-top h3 {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
 .card-top p {
-  font-size: 9px;
+  font-size: 12px;
   color: #65748a;
   margin-top: 7px;
 }
@@ -382,7 +382,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 7px;
+  font-size: 12px;
   color: #74849c;
   margin-top: 13px;
 }
@@ -399,15 +399,15 @@ html {
 }
 .empty-chart-icon {
   color: #7285a2;
-  font-size: 36px;
+  font-size: 40px;
 }
 .chart-empty strong {
-  font-size: 11px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 500;
   margin-top: 8px;
 }
 .chart-empty p {
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.8;
   max-width: 260px;
   margin-top: 8px;
@@ -427,12 +427,12 @@ html {
   margin-bottom: 17px;
 }
 .empty-state h3 {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   color: #29374c;
 }
 .empty-state p {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.9;
   max-width: 390px;
   margin-top: 10px;
@@ -444,10 +444,10 @@ html {
   gap: 10px;
   color: #4b5a71;
   min-height: 160px;
-  font-size: 11px;
+  font-size: 15px;
 }
 .inline-error {
-  font-size: 11px;
+  font-size: 15px;
   color: #c13e3e;
   padding: 25px 10px;
   line-height: 1.9;
@@ -462,13 +462,13 @@ html {
   margin-top: 22px;
 }
 .small-muted {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.9;
   color: #56657b;
   margin: 15px 0;
 }
 label {
-  font-size: 11px;
+  font-size: 15px;
   color: #1f2939;
   display: block;
   margin-bottom: 9px;
@@ -483,7 +483,7 @@ select {
   outline: none;
   padding: 13px 14px;
   width: 100%;
-  font-size: 12px;
+  font-size: 16px;
   transition: border-color 0.2s;
 }
 input:focus,
@@ -506,7 +506,7 @@ form > .button {
   background: #f5edf177;
   border: 1px solid #ebdfe466;
   padding: 13px 15px;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.8;
   border-radius: 7px;
   margin: 15px 0;
@@ -526,12 +526,12 @@ form > .button {
   padding: 35px;
 }
 .prose h2 {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
   margin: 25px 0 13px;
 }
 .prose p {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 2;
   color: #2c384b;
 }
@@ -539,4 +539,4 @@ form > .button {
   margin-top: 20px;
 }
 
-.quote-time { display: block; color: #2d394b; font-size: 10px; margin-top: 5px; font-weight: 400; }
+.quote-time { display: block; color: #2d394b; font-size: 14px; margin-top: 5px; font-weight: 500; }

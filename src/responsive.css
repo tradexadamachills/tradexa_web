@@ -4,13 +4,13 @@
     gap: 80px;
   }
   .hero h1 {
-    font-size: 70px;
+    font-size: 78px;
   }
   .hero-copy > p {
-    font-size: 15px;
+    font-size: 19px;
   }
   .hero-actions .button {
-    font-size: 12px;
+    font-size: 16px;
   }
   .terminal-main .chart-wrap,
   .terminal-main .chart-wrap svg {
@@ -20,10 +20,10 @@
     padding: 26px;
   }
   .terminal-balance > strong {
-    font-size: 34px;
+    font-size: 38px;
   }
   .terminal-heading h3 {
-    font-size: 15px;
+    font-size: 19px;
   }
 }
 @media (max-width: 1150px) {
@@ -38,22 +38,22 @@
     min-height: 650px;
   }
   .hero h1 {
-    font-size: 51px;
+    font-size: 57px;
     letter-spacing: -2.3px;
   }
   .hero-actions {
     flex-wrap: wrap;
   }
   .hero-copy > p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .hero-actions .button {
-    font-size: 10px;
+    font-size: 14px;
     padding: 13px;
   }
   .hero-assurances {
     gap: 12px;
-    font-size: 8px;
+    font-size: 12px;
   }
   .floating-security {
     width: 290px;
@@ -62,29 +62,29 @@
     bottom: -13px;
   }
   .floating-security strong {
-    font-size: 9px;
+    font-size: 12px;
   }
   .terminal-main {
     padding: 19px 17px;
   }
   .terminal-balance > strong {
-    font-size: 27px;
+    font-size: 30px;
   }
   .terminal-heading h3 {
-    font-size: 11px;
+    font-size: 15px;
   }
   .ribbon-inner {
     gap: 14px;
   }
   .ribbon-label {
     padding-right: 15px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .ribbon-asset strong {
-    font-size: 10px;
+    font-size: 14px;
   }
   .ribbon-asset div > span {
-    font-size: 8px;
+    font-size: 12px;
   }
   .ribbon-asset {
     gap: 7px;
@@ -96,13 +96,13 @@
     padding: 24px 20px 0;
   }
   .feature-card h3 {
-    font-size: 20px;
+    font-size: 22px;
   }
   .section-title h2 {
-    font-size: 31px;
+    font-size: 35px;
   }
   .feature-card > p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .workspace-main {
     padding: 28px 25px 0;
@@ -127,13 +127,13 @@
     display: none;
   }
   .portfolio-meta {
-    font-size: 7px;
+    font-size: 12px;
   }
   .portfolio-meta .available {
     display: none;
   }
   .portfolio-total {
-    font-size: 31px;
+    font-size: 35px;
   }
   .performance-header {
     flex-wrap: wrap;
@@ -157,11 +157,11 @@
     left: -14px;
   }
   .breadcrumb {
-    font-size: 9px;
+    font-size: 12px;
   }
   .preview-banner {
     padding: 10px 25px;
-    font-size: 8px;
+    font-size: 12px;
   }
   .trade-grid {
     grid-template-columns: minmax(0, 1fr) 260px;
@@ -170,7 +170,7 @@
     padding: 35px;
   }
   .auth-message h1 {
-    font-size: 34px;
+    font-size: 38px;
   }
   .auth-main {
     padding: 32px;
@@ -179,7 +179,7 @@
     gap: 12px;
   }
   .help-topics summary {
-    font-size: 11px;
+    font-size: 15px;
   }
 }
 @media (max-width: 900px) {
@@ -197,7 +197,7 @@
     text-align: center;
   }
   .hero h1 {
-    font-size: 62px;
+    font-size: 69px;
     line-height: 1.13;
   }
   .hero h1 br:nth-child(2) {
@@ -207,14 +207,14 @@
     content: " ";
   }
   .hero-copy > p {
-    font-size: 14px;
+    font-size: 18px;
   }
   .hero-actions,
   .hero-assurances {
     justify-content: center;
   }
   .hero-actions .button {
-    font-size: 12px;
+    font-size: 16px;
     padding: 15px 20px;
   }
   .hero-visual {
@@ -233,14 +233,14 @@
     padding: 24px;
   }
   .terminal-heading h3 {
-    font-size: 14px;
+    font-size: 18px;
   }
   .terminal-main .chart-wrap,
   .terminal-main .chart-wrap svg {
     height: 145px;
   }
   .terminal-balance > strong {
-    font-size: 33px;
+    font-size: 37px;
   }
   .ribbon-label {
     display: none;
@@ -290,7 +290,7 @@
     align-items: start;
   }
   .section-top > .text-link {
-    font-size: 10px;
+    font-size: 14px;
     margin-top: 20px;
   }
   .security-grid {
@@ -302,10 +302,10 @@
     margin-left: -20px;
   }
   .security-grid .section-title h2 {
-    font-size: 29px;
+    font-size: 32px;
   }
   .security-grid .section-title p {
-    font-size: 11px;
+    font-size: 15px;
   }
   .steps-grid {
     gap: 35px;
@@ -329,7 +329,7 @@
     margin-left: 190px;
   }
   .sidebar .brand {
-    font-size: 23px;
+    font-size: 26px;
   }
   .sidebar-brand {
     margin-left: 10px;
@@ -340,16 +340,16 @@
     padding: 9px 6px;
   }
   .workspace-switch strong {
-    font-size: 9px;
+    font-size: 12px;
   }
   .workspace-switch div > span {
-    font-size: 7px;
+    font-size: 12px;
   }
   .workspace-switch > svg {
     width: 10px;
   }
   .sidebar-link {
-    font-size: 10px;
+    font-size: 14px;
     gap: 10px;
     padding: 11px;
   }
@@ -382,10 +382,10 @@
     padding: 9px 5px;
   }
   .quick-grid small {
-    font-size: 6px;
+    font-size: 12px;
   }
   .quick-grid strong {
-    font-size: 8px;
+    font-size: 12px;
   }
   .quick-grid > a > span,
   .quick-grid > button > span {
@@ -416,35 +416,35 @@
     margin-bottom: -16px;
   }
   .market-panel .text-link {
-    font-size: 7px;
+    font-size: 12px;
     gap: 4px;
   }
   .market-table td {
     padding: 14px 5px;
   }
   .market-table .price {
-    font-size: 9px;
+    font-size: 12px;
   }
   .market-table .asset-icon {
     width: 28px;
     height: 28px;
-    font-size: 16px;
+    font-size: 20px;
   }
   .asset-cell {
     gap: 7px;
   }
   .market-table .asset-cell strong {
-    font-size: 9px;
+    font-size: 12px;
   }
   .market-table .icon-button {
     width: 22px;
   }
   .market-table .change {
-    font-size: 7px;
+    font-size: 12px;
     gap: 0;
   }
   .page-heading h1 {
-    font-size: 24px;
+    font-size: 27px;
   }
   .workspace-footer > span:nth-child(2) {
     display: none;
@@ -454,18 +454,18 @@
     gap: 13px;
   }
   .insight-banner > .button {
-    font-size: 7px;
+    font-size: 12px;
     padding: 9px;
     gap: 6px;
   }
   .insight-banner p {
-    font-size: 8px;
+    font-size: 12px;
   }
   .insight-banner h3 {
-    font-size: 13px;
+    font-size: 16px;
   }
   .insight-banner .micro {
-    font-size: 5px;
+    font-size: 12px;
     letter-spacing: 1px;
   }
   .insight-icon {
@@ -479,7 +479,7 @@
     display: none;
   }
   .preview-banner > span {
-    font-size: 7px;
+    font-size: 12px;
   }
   .trade-grid {
     grid-template-columns: 1fr;
@@ -505,13 +505,13 @@
   .market-summaries .asset-icon {
     width: 30px;
     height: 30px;
-    font-size: 16px;
+    font-size: 20px;
   }
   .market-summaries h3 {
-    font-size: 10px;
+    font-size: 14px;
   }
   .market-summaries strong {
-    font-size: 19px;
+    font-size: 21px;
   }
   .market-toolbar {
     flex-wrap: wrap;
@@ -531,7 +531,7 @@
     height: 76px;
   }
   .brand {
-    font-size: 25px;
+    font-size: 28px;
   }
   .brand-mark {
     width: 29px;
@@ -567,14 +567,14 @@
     gap: 40px;
   }
   .hero h1 {
-    font-size: 47px;
+    font-size: 53px;
     letter-spacing: -2px;
   }
   .hero h1 br:nth-child(2) {
     display: initial;
   }
   .hero-copy > p {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.9;
     margin: 22px 0;
   }
@@ -583,16 +583,16 @@
   }
   .hero-actions .button {
     padding: 13px 15px;
-    font-size: 10px;
+    font-size: 14px;
     gap: 9px;
     min-height: 44px;
   }
   .hero-assurances {
-    font-size: 7px;
+    font-size: 12px;
     gap: 15px;
   }
   .launch-label {
-    font-size: 8px;
+    font-size: 12px;
     margin-bottom: 22px;
   }
   .hero-visual {
@@ -607,22 +607,22 @@
   .terminal-rail {
     width: 33px;
     gap: 17px;
-    font-size: 15px;
+    font-size: 19px;
   }
   .terminal-rail span {
     padding: 3px 6px;
   }
   .terminal-heading h3 {
-    font-size: 11px;
+    font-size: 15px;
   }
   .terminal-balance {
     padding: 20px 0 14px;
   }
   .terminal-balance > strong {
-    font-size: 28px;
+    font-size: 31px;
   }
   .terminal-balance > strong > span {
-    font-size: 21px;
+    font-size: 24px;
   }
   .terminal-main .chart-wrap,
   .terminal-main .chart-wrap svg {
@@ -632,23 +632,23 @@
     gap: 8px;
   }
   .terminal-assets > div {
-    font-size: 7px;
+    font-size: 12px;
     gap: 4px;
   }
   .terminal-assets .asset-icon {
     width: 21px;
     height: 21px;
-    font-size: 11px;
+    font-size: 15px;
     border-radius: 6px;
   }
   .terminal-assets svg {
     width: 10px;
   }
   .terminal-brand {
-    font-size: 8px;
+    font-size: 12px;
   }
   .terminal-assets span small {
-    font-size: 5px;
+    font-size: 12px;
   }
   .floating-security {
     left: 12px;
@@ -665,10 +665,10 @@
     width: 19px;
   }
   .floating-security strong {
-    font-size: 8px;
+    font-size: 12px;
   }
   .floating-security div > span {
-    font-size: 7px;
+    font-size: 12px;
   }
   .ribbon-inner {
     display: grid;
@@ -683,15 +683,15 @@
     display: none;
   }
   .ribbon-asset strong {
-    font-size: 9px;
+    font-size: 12px;
   }
   .ribbon-asset .asset-icon {
     width: 27px;
     height: 27px;
-    font-size: 14px;
+    font-size: 18px;
   }
   .ribbon-note {
-    font-size: 6px;
+    font-size: 12px;
     line-height: 1.9;
   }
   .workspace-section {
@@ -705,15 +705,15 @@
     margin-top: 18px;
   }
   .section-title h2 {
-    font-size: 28px;
+    font-size: 31px;
     letter-spacing: -1px;
   }
   .section-title .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
     letter-spacing: 1.5px;
   }
   .section-title p {
-    font-size: 11px;
+    font-size: 15px;
   }
   .feature-grid {
     grid-template-columns: 1fr;
@@ -729,14 +729,14 @@
     padding-bottom: 0;
   }
   .feature-card > p {
-    font-size: 11px;
+    font-size: 15px;
     max-width: 100%;
   }
   .feature-large > .mini-portfolio {
     margin-top: 24px;
   }
   .feature-card h3 {
-    font-size: 23px;
+    font-size: 26px;
   }
   .feature-icon {
     margin-bottom: 18px;
@@ -745,10 +745,10 @@
     margin-top: 23px;
   }
   .feature-lines > div {
-    font-size: 12px;
+    font-size: 16px;
   }
   .feature-lines .micro {
-    font-size: 9px;
+    font-size: 12px;
   }
   .devices {
     margin: 20px 10px 0;
@@ -771,10 +771,10 @@
     margin: -5px 0 0;
   }
   .security-grid .section-title h2 {
-    font-size: 29px;
+    font-size: 32px;
   }
   .security-grid .section-title p {
-    font-size: 11px;
+    font-size: 15px;
   }
   .start-section {
     padding: 60px 0 30px;
@@ -798,13 +798,13 @@
   }
   .steps-grid > article > h3 {
     padding-top: 3px;
-    font-size: 13px;
+    font-size: 16px;
   }
   .steps-grid > article > p {
     grid-column: 2;
     max-width: 100%;
     margin: 5px 0;
-    font-size: 10px;
+    font-size: 14px;
   }
   .steps-grid > article:not(:last-child):after {
     display: none;
@@ -815,11 +815,11 @@
     gap: 30px;
   }
   .faq-item > button {
-    font-size: 11px;
+    font-size: 15px;
     padding: 19px 0;
   }
   .faq-item p {
-    font-size: 10px;
+    font-size: 14px;
     padding-right: 20px;
   }
   .final-cta {
@@ -827,16 +827,16 @@
     margin-bottom: 50px;
   }
   .final-cta .eyebrow {
-    font-size: 7px;
+    font-size: 12px;
     letter-spacing: 1.3px;
   }
   .final-cta h2 {
-    font-size: 31px;
+    font-size: 35px;
     letter-spacing: -1px;
     margin-top: 17px;
   }
   .final-cta > .button {
-    font-size: 10px;
+    font-size: 14px;
     padding: 13px 16px;
     min-height: 44px;
   }
@@ -850,17 +850,17 @@
   }
   .footer-main > div:first-child > p {
     margin-top: 8px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .footer-main > div > strong {
-    font-size: 10px;
+    font-size: 14px;
     margin-bottom: 15px;
   }
   .footer-main > div > a:not(.brand) {
-    font-size: 9px;
+    font-size: 12px;
   }
   .footer-bottom {
-    font-size: 7px;
+    font-size: 12px;
     line-height: 1.9;
     flex-wrap: wrap;
     gap: 10px;
@@ -884,7 +884,7 @@
     max-width: 360px;
   }
   .auth-form-wrap h1 {
-    font-size: 29px;
+    font-size: 32px;
   }
   .verification-layout > header {
     padding: 23px;
@@ -894,29 +894,29 @@
   }
   .onboarding-progress {
     gap: 9px;
-    font-size: 8px;
+    font-size: 12px;
     margin-bottom: 35px;
   }
   .onboarding-progress i {
     width: 17px;
   }
   .verification-heading h1 {
-    font-size: 27px;
+    font-size: 30px;
   }
   .verification-heading > p {
-    font-size: 11px;
+    font-size: 15px;
   }
   .verification-card.panel {
     padding: 22px;
   }
   .verification-steps h3 {
-    font-size: 11px;
+    font-size: 15px;
   }
   .verification-steps p {
-    font-size: 9px;
+    font-size: 12px;
   }
   .verification-footnote {
-    font-size: 8px;
+    font-size: 12px;
   }
   .verification-footnote > svg {
     flex-shrink: 0;
@@ -936,7 +936,7 @@
     display: inline-flex;
   }
   .sidebar .brand {
-    font-size: 24px;
+    font-size: 27px;
   }
   .sidebar-backdrop {
     position: fixed;
@@ -957,7 +957,7 @@
     gap: 9px;
   }
   .breadcrumb {
-    font-size: 9px;
+    font-size: 12px;
     gap: 7px;
   }
   .topbar-actions {
@@ -972,7 +972,7 @@
   .preview-banner {
     padding: 9px 18px;
     line-height: 1.8;
-    font-size: 7px;
+    font-size: 12px;
   }
   .preview-banner > span {
     display: block;
@@ -984,7 +984,7 @@
     width: 11px;
   }
   .preview-banner > span strong {
-    font-size: 8px;
+    font-size: 12px;
   }
   .page-heading {
     margin-bottom: 23px;
@@ -992,18 +992,18 @@
     align-items: start;
   }
   .page-heading .eyebrow {
-    font-size: 7px;
+    font-size: 12px;
     letter-spacing: 1.2px;
   }
   .page-heading h1 {
-    font-size: 24px;
+    font-size: 27px;
   }
   .page-heading p {
-    font-size: 10px;
+    font-size: 14px;
     max-width: 280px;
   }
   .date-chip {
-    font-size: 7px;
+    font-size: 12px;
     padding: 8px;
     gap: 6px;
     margin-top: 20px;
@@ -1029,10 +1029,10 @@
     padding: 9px;
   }
   .quick-grid strong {
-    font-size: 9px;
+    font-size: 12px;
   }
   .quick-grid small {
-    font-size: 7px;
+    font-size: 12px;
   }
   .overview-lower {
     grid-template-columns: 1fr;
@@ -1045,7 +1045,7 @@
     padding: 20px;
   }
   .portfolio-total {
-    font-size: 35px;
+    font-size: 39px;
   }
   .portfolio-card.panel {
     padding: 20px;
@@ -1056,51 +1056,51 @@
     gap: 9px;
   }
   .performance-header h3 {
-    font-size: 9px;
+    font-size: 12px;
   }
   .periods > button {
-    font-size: 7px;
+    font-size: 12px;
     padding: 5px 6px;
   }
   .portfolio-meta {
-    font-size: 8px;
+    font-size: 12px;
   }
   .portfolio-meta > span > strong {
-    font-size: 8px;
+    font-size: 12px;
   }
   .account-confidence {
     padding: 17px 18px;
     align-items: start;
   }
   .account-confidence h3 {
-    font-size: 11px;
+    font-size: 15px;
   }
   .account-confidence p {
-    font-size: 9px;
+    font-size: 12px;
     margin-top: 5px;
   }
   .account-confidence a {
-    font-size: 9px;
+    font-size: 12px;
     margin-top: 10px;
   }
   .market-panel .text-link {
-    font-size: 8px;
+    font-size: 12px;
   }
   .market-table th {
-    font-size: 8px;
+    font-size: 12px;
   }
   .market-table .price {
-    font-size: 10px;
+    font-size: 14px;
   }
   .market-table .asset-cell strong {
-    font-size: 10px;
+    font-size: 14px;
   }
   .market-table .asset-icon {
     width: 30px;
     height: 30px;
   }
   .market-table .change {
-    font-size: 8px;
+    font-size: 12px;
   }
   .market-table td {
     padding: 15px 5px;
@@ -1111,16 +1111,16 @@
     margin-bottom: -20px;
   }
   .watchlist strong {
-    font-size: 11px;
+    font-size: 15px;
   }
   .watchlist > div {
     padding: 14px 0;
   }
   .watchlist small {
-    font-size: 8px;
+    font-size: 12px;
   }
   .watchlist .change {
-    font-size: 9px;
+    font-size: 12px;
   }
   .watchlist-panel .empty-state {
     padding: 27px 10px;
@@ -1134,22 +1134,22 @@
     flex: 1;
   }
   .insight-banner .micro {
-    font-size: 5px;
+    font-size: 12px;
   }
   .insight-banner h3 {
-    font-size: 13px;
+    font-size: 16px;
   }
   .insight-banner p {
-    font-size: 9px;
+    font-size: 12px;
   }
   .insight-banner > .button {
     width: 100%;
-    font-size: 9px;
+    font-size: 12px;
     min-height: 36px;
     margin-top: 3px;
   }
   .workspace-footer {
-    font-size: 7px;
+    font-size: 12px;
     padding-top: 20px;
     margin-top: 30px;
   }
@@ -1164,7 +1164,7 @@
   .market-summaries strong {
     grid-column: 3;
     grid-row: 1;
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 0;
   }
   .market-summaries .change {
@@ -1172,18 +1172,18 @@
     justify-self: end;
   }
   .market-summaries h3 {
-    font-size: 12px;
+    font-size: 16px;
     grid-row: 1/3;
   }
   .market-summaries > .panel > .asset-icon {
     grid-row: 1/3;
   }
   .market-summaries h3 span {
-    font-size: 9px;
+    font-size: 12px;
   }
   .filter-tabs > button {
     padding: 8px 9px;
-    font-size: 8px;
+    font-size: 12px;
   }
   .market-toolbar {
     gap: 15px;
@@ -1204,10 +1204,10 @@
     flex: 1;
   }
   .security-setting p {
-    font-size: 9px;
+    font-size: 12px;
   }
   .security-setting .badge {
-    font-size: 8px;
+    font-size: 12px;
     align-self: center;
   }
   .setting-icon {
@@ -1218,51 +1218,51 @@
     gap: 11px;
   }
   .profile-intro .badge {
-    font-size: 7px;
-  }
-  .profile-intro h3 {
     font-size: 12px;
   }
+  .profile-intro h3 {
+    font-size: 16px;
+  }
   .profile-intro p {
-    font-size: 9px;
+    font-size: 12px;
   }
   .large-avatar {
     width: 44px;
     height: 44px;
-    font-size: 19px;
+    font-size: 21px;
   }
   .verification-preview > div {
     gap: 12px;
   }
   .verification-preview h3 {
-    font-size: 10px;
+    font-size: 14px;
   }
   .verification-preview p {
-    font-size: 9px;
+    font-size: 12px;
   }
   .verification-preview .badge {
-    font-size: 7px;
+    font-size: 12px;
     display: none;
   }
   .verification-preview > .button {
-    font-size: 10px;
+    font-size: 14px;
     padding: 12px 14px;
   }
   .help-topics summary {
-    font-size: 12px;
+    font-size: 16px;
   }
   .public-info > header > .text-link {
-    font-size: 8px;
+    font-size: 12px;
     gap: 4px;
   }
   .public-info .prose {
     padding: 25px;
   }
   .prose p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .prose h2 {
-    font-size: 16px;
+    font-size: 20px;
   }
   .skip-link {
     left: 15px;

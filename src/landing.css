@@ -14,7 +14,7 @@
 .site-nav {
   display: flex;
   gap: 33px;
-  font-size: 12px;
+  font-size: 16px;
   color: #292f3b;
 }
 .site-nav a:hover {
@@ -26,7 +26,7 @@
   align-items: center;
 }
 .login-link {
-  font-size: 12px;
+  font-size: 16px;
   color: #141924;
 }
 .hero {
@@ -53,7 +53,7 @@
   border: 1px solid #e9edf2;
   border-radius: 30px;
   color: #151f30;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.2px;
   margin-bottom: 28px;
 }
@@ -72,13 +72,13 @@
   font-size: clamp(44px, 4.65vw, 66px);
   line-height: 1.14;
   letter-spacing: -3.1px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .hero h1 > span {
   color: #004eff;
 }
 .hero-copy > p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.85;
   color: #2f3848;
   margin: 25px 0 27px;
@@ -90,14 +90,14 @@
 }
 .hero-actions .button {
   padding: 15px 18px;
-  font-size: 11px;
+  font-size: 15px;
   gap: 14px;
 }
 .hero-assurances {
   display: flex;
   gap: 21px;
   color: #6a7585;
-  font-size: 9px;
+  font-size: 12px;
   margin-top: 21px;
 }
 .hero-assurances > span {
@@ -157,13 +157,13 @@
   background: #00000002;
 }
 .terminal-brand {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 1.2px;
   color: #080f1d;
-  font-weight: 700;
+  font-weight: 800;
 }
 .terminal-dots {
-  font-size: 17px;
+  font-size: 19px;
   letter-spacing: 4px;
   color: #798193;
 }
@@ -179,7 +179,7 @@
   padding-top: 20px;
   gap: 21px;
   color: #5d6477;
-  font-size: 19px;
+  font-size: 21px;
 }
 .terminal-rail span {
   padding: 3px 8px;
@@ -200,16 +200,16 @@
   align-items: center;
 }
 .terminal-heading .micro {
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 1.2px;
 }
 .terminal-heading h3 {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   margin-top: 5px;
 }
 .terminal-heading .badge {
-  font-size: 7px;
+  font-size: 12px;
   padding: 4px 7px;
 }
 .terminal-balance {
@@ -219,28 +219,28 @@
   gap: 7px;
 }
 .terminal-balance > span {
-  font-size: 8px;
+  font-size: 12px;
   color: #5a6374;
 }
 .terminal-balance > strong {
-  font-size: 30px;
+  font-size: 34px;
   letter-spacing: -1px;
-  font-weight: 500;
+  font-weight: 600;
   font-family: Manrope, sans-serif;
 }
 .terminal-balance > strong > span {
   color: #626c81;
-  font-size: 23px;
+  font-size: 26px;
 }
 .terminal-balance .terminal-gain {
-  font-size: 8px;
+  font-size: 12px;
   color: #457964;
 }
 .terminal-tabs {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: 12px;
   color: #262e3c;
 }
 .terminal-tabs > div {
@@ -248,8 +248,8 @@
   gap: 5px;
 }
 .terminal-tabs b {
-  font-size: 7px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 500;
   padding: 5px 7px;
   color: #5b6477;
 }
@@ -277,18 +277,18 @@
   align-items: center;
   gap: 6px;
   flex: 1;
-  font-size: 8px;
+  font-size: 12px;
 }
 .terminal-assets .asset-icon {
   width: 24px;
   height: 24px;
-  font-size: 12px;
+  font-size: 16px;
   border-radius: 8px;
 }
 .terminal-assets span small {
   display: block;
   color: #666f82;
-  font-size: 6px;
+  font-size: 12px;
   margin-top: 3px;
 }
 .terminal-assets svg {
@@ -297,7 +297,7 @@
 }
 .preview-disclaimer {
   text-align: center;
-  font-size: 5.5px;
+  font-size: 12px;
   letter-spacing: 1.2px;
   color: #717c91;
   margin-top: 17px;
@@ -329,13 +329,13 @@
   height: 38px;
 }
 .floating-security strong {
-  font-size: 10px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   display: block;
 }
 .floating-security div > span {
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   color: #5e6f77;
   margin-top: 6px;
 }
@@ -356,7 +356,7 @@
   gap: 20px;
 }
 .ribbon-label {
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.7;
   color: #586478;
   padding-right: 34px;
@@ -364,7 +364,7 @@
 }
 .ribbon-label strong {
   color: #151d2a;
-  font-weight: 500;
+  font-weight: 600;
 }
 .ribbon-asset {
   display: flex;
@@ -373,26 +373,26 @@
 }
 .ribbon-asset strong {
   display: block;
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
 }
 .ribbon-asset div > span {
   display: block;
-  font-size: 9px;
+  font-size: 12px;
   color: #6a7689;
   margin-top: 4px;
 }
 .ribbon-asset .asset-icon {
   width: 32px;
   height: 32px;
-  font-size: 17px;
+  font-size: 19px;
 }
 .ribbon-asset .asset-icon.gold,
 .ribbon-asset .asset-icon.silver {
-  font-size: 12px;
+  font-size: 16px;
 }
 .ribbon-note {
-  font-size: 8px;
+  font-size: 12px;
   color: #7c8697;
   text-align: center;
   margin-top: 18px;
@@ -440,13 +440,13 @@
   height: 20px;
 }
 .feature-card h3 {
-  font-size: 22px;
+  font-size: 25px;
   line-height: 1.35;
   letter-spacing: -0.5px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .feature-card > p {
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.9;
   color: #5b6474;
   margin-top: 13px;
@@ -460,7 +460,7 @@
   background: #eef1f7;
 }
 .mini-portfolio > span {
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 1px;
   color: #505c6f;
 }
@@ -492,7 +492,7 @@
 .mini-portfolio footer {
   display: flex;
   gap: 15px;
-  font-size: 6px;
+  font-size: 12px;
   color: #4d5768;
   margin-top: 10px;
 }
@@ -508,7 +508,7 @@
   border-radius: 50%;
 }
 .mini-portfolio small {
-  font-size: 6px;
+  font-size: 12px;
   color: #778296;
   display: block;
   margin-top: 12px;
@@ -521,18 +521,18 @@
   align-items: center;
   padding: 13px 10px;
   border-top: 1px solid #e9ecf3;
-  font-size: 10px;
+  font-size: 14px;
   gap: 10px;
 }
 .feature-lines .asset-icon {
   width: 26px;
   height: 26px;
-  font-size: 15px;
+  font-size: 19px;
   border-radius: 7px;
 }
 .feature-lines .micro {
   margin-left: auto;
-  font-size: 8px;
+  font-size: 12px;
   color: #5f6b81;
 }
 .devices {
@@ -617,7 +617,7 @@
   gap: 16px;
 }
 .security-points > div > span {
-  font-size: 9px;
+  font-size: 12px;
   color: #52657d;
   background: #eef1f7;
   border: 1px solid #e7ebf2;
@@ -630,11 +630,11 @@
   flex-shrink: 0;
 }
 .security-points h4 {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
 .security-points p {
-  font-size: 10px;
+  font-size: 14px;
   color: #586376;
   line-height: 1.7;
   max-width: 320px;
@@ -684,7 +684,7 @@
   border: 1px solid #e7ebef;
   border-radius: 8px;
   padding: 11px 14px;
-  font-size: 9px;
+  font-size: 12px;
   color: #1d2732;
   box-shadow: 0 8px 24px #0003;
 }
@@ -740,17 +740,17 @@
   background: #edf0f7;
   border: 1px solid #8d9dbb;
   border-radius: 11px;
-  font-size: 13px;
+  font-size: 16px;
   color: #0051ff;
   margin-bottom: 18px;
 }
 .steps-grid h3 {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
 }
 .steps-grid p {
   color: #5e697b;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.9;
   max-width: 225px;
   margin: 9px auto 0;
@@ -777,16 +777,16 @@
   gap: 20px;
   text-align: left;
   width: 100%;
-  font-size: 12px;
+  font-size: 16px;
   color: #151c29;
 }
 .faq-item > button > span {
-  font-size: 21px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 500;
   color: #515d74;
 }
 .faq-item p {
-  font-size: 11px;
+  font-size: 15px;
   color: #566378;
   line-height: 1.9;
   padding-bottom: 23px;
@@ -804,20 +804,20 @@
   overflow: hidden;
 }
 .final-cta h2 {
-  font-size: 43px;
-  font-weight: 500;
+  font-size: 48px;
+  font-weight: 600;
   letter-spacing: -1.8px;
   line-height: 1.2;
   margin: 18px 0 27px;
 }
 .final-cta > p {
-  font-size: 9px;
+  font-size: 12px;
   color: #626f84;
   margin-top: 18px;
   margin-bottom: 8px;
 }
 .final-cta > .text-link {
-  font-size: 9px;
+  font-size: 12px;
 }
 .site-footer {
   padding-bottom: 24px;
@@ -829,7 +829,7 @@
   padding-bottom: 38px;
 }
 .footer-main p {
-  font-size: 10px;
+  font-size: 14px;
   color: #677387;
   line-height: 1.9;
   max-width: 245px;
@@ -837,19 +837,19 @@
 }
 .footer-main > div > strong {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
   color: #151c28;
-  font-weight: 500;
+  font-weight: 600;
   margin: 8px 0 18px;
 }
 .footer-main > div > a:not(.brand) {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
   color: #677387;
   margin-top: 12px;
 }
 .footer-note {
-  font-size: 10px;
+  font-size: 14px;
   color: #313f41;
   margin-top: 8px;
 }
@@ -863,7 +863,7 @@
   display: flex;
   justify-content: space-between;
   gap: 25px;
-  font-size: 8px;
+  font-size: 12px;
 }
 .footer-bottom > a {
   display: flex;
@@ -924,7 +924,7 @@
 .hero-coin > span {
   display: block;
   text-align: center;
-  font-size: 5px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 1px;
   color: #ebeff6;
@@ -1021,7 +1021,7 @@
     border-radius: 13px;
   }
   .hero-coin > span {
-    font-size: 4px;
+    font-size: 12px;
     letter-spacing: 0.5px;
   }
   .hero-visual .preview-terminal {

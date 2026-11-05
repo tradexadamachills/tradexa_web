@@ -23,7 +23,7 @@
   margin: 0 11px 33px;
 }
 .sidebar .brand {
-  font-size: 25px;
+  font-size: 28px;
 }
 .sidebar .brand-mark {
   width: 29px;
@@ -49,16 +49,16 @@
   color: #05122b;
   border: 1px solid #7f90ab;
   border-radius: 6px;
-  font-size: 12px;
+  font-size: 16px;
   flex-shrink: 0;
 }
 .workspace-switch strong {
-  font-size: 10px;
+  font-size: 14px;
   display: block;
-  font-weight: 500;
+  font-weight: 600;
 }
 .workspace-switch div > span {
-  font-size: 8px;
+  font-size: 12px;
   color: #5d6b7f;
   display: block;
   margin-top: 4px;
@@ -68,7 +68,7 @@
   color: #5c697e;
 }
 .nav-label {
-  font-size: 8px;
+  font-size: 12px;
   color: #79879d;
   letter-spacing: 1.7px;
   margin: 0 14px 12px;
@@ -86,7 +86,7 @@
   width: 100%;
   padding: 12px 13px;
   border-radius: 7px;
-  font-size: 11px;
+  font-size: 15px;
   color: #525f73;
   background: none;
   text-align: left;
@@ -114,7 +114,7 @@
 }
 .coming-tag {
   margin-left: auto;
-  font-size: 7px;
+  font-size: 12px;
   background: #ebedf2;
   color: #5c6676;
   border-radius: 3px;
@@ -138,11 +138,11 @@
 }
 .sidebar-help > strong {
   display: block;
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
 }
 .sidebar-help p {
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.7;
   color: #536175;
   margin-top: 6px;
@@ -153,7 +153,7 @@
   justify-content: space-between;
   margin-top: 15px;
   color: #1562ea;
-  font-size: 9px;
+  font-size: 12px;
 }
 .workspace-body {
   margin-left: 228px;
@@ -177,11 +177,11 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 10px;
+  font-size: 14px;
   color: #6c7b8e;
 }
 .breadcrumb > strong {
-  font-weight: 400;
+  font-weight: 500;
   color: #151f2f;
 }
 .topbar-actions {
@@ -193,7 +193,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 8px;
+  font-size: 12px;
   border: 1px solid #eaeff2;
   border-radius: 20px;
   padding: 6px 9px;
@@ -221,7 +221,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 15px;
   color: #111b2c;
 }
 .preview-banner {
@@ -232,7 +232,7 @@
   background: #eaeff688;
   border-bottom: 1px solid #e1e7f0;
   color: #273549;
-  font-size: 9px;
+  font-size: 12px;
   gap: 15px;
 }
 .preview-banner > span,
@@ -242,7 +242,7 @@
   align-items: center;
 }
 .preview-banner strong {
-  font-weight: 500;
+  font-weight: 600;
   color: #1864e7;
 }
 .preview-banner > a {
@@ -261,7 +261,7 @@
   padding: 10px 12px;
   border: 1px solid #e8ebf1;
   border-radius: 7px;
-  font-size: 9px;
+  font-size: 12px;
   color: #2b3647;
   background: #f1f4f9;
 }
@@ -272,7 +272,7 @@
 }
 .portfolio-total {
   font-family: Manrope, sans-serif;
-  font-size: 36px;
+  font-size: 40px;
   letter-spacing: -1px;
   display: flex;
   align-items: center;
@@ -283,21 +283,21 @@
 .portfolio-total .badge {
   font-family: "DM Sans", sans-serif;
   letter-spacing: 0;
-  font-size: 7px;
+  font-size: 12px;
   padding: 4px 6px;
 }
 .portfolio-meta {
   display: flex;
   justify-content: space-between;
   gap: 15px;
-  font-size: 8px;
+  font-size: 12px;
   color: #637187;
   margin-top: 10px;
   flex-wrap: wrap;
 }
 .portfolio-meta > span > strong {
-  font-size: 8px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 500;
   margin-left: 6px;
 }
 .portfolio-meta .available {
@@ -324,8 +324,8 @@
   gap: 12px;
 }
 .performance-header h3 {
-  font-size: 10px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   color: #212b3b;
 }
 .periods {
@@ -333,7 +333,7 @@
   gap: 3px;
 }
 .periods > button {
-  font-size: 8px;
+  font-size: 12px;
   background: none;
   color: #606f85;
   border-radius: 4px;
@@ -352,7 +352,7 @@
   padding: 19px;
 }
 .quick-actions .micro {
-  font-size: 6px;
+  font-size: 12px;
   letter-spacing: 1px;
   color: #707f95;
 }
@@ -387,11 +387,11 @@
   margin-bottom: 10px;
 }
 .quick-grid strong {
-  font-size: 9px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
 }
 .quick-grid small {
-  font-size: 7px;
+  font-size: 12px;
   color: #65768f;
   margin-top: 5px;
 }
@@ -418,12 +418,12 @@
   flex-shrink: 0;
 }
 .account-confidence h3 {
-  font-size: 10px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   color: #1a2821;
 }
 .account-confidence p {
-  font-size: 8px;
+  font-size: 12px;
   color: #6d8784;
   line-height: 1.8;
   margin-top: 6px;
@@ -433,11 +433,11 @@
   gap: 7px;
   align-items: center;
   color: #4e6a60;
-  font-size: 8px;
+  font-size: 12px;
   margin-top: 12px;
 }
 .action-notice {
-  font-size: 8px;
+  font-size: 12px;
   line-height: 1.7;
   color: #223046;
   margin-top: 12px;
@@ -452,21 +452,21 @@
   padding-bottom: 4px;
 }
 .market-panel .text-link {
-  font-size: 8px;
+  font-size: 12px;
 }
 .market-table {
   border-collapse: collapse;
   width: 100%;
   text-align: left;
-  font-size: 10px;
+  font-size: 14px;
   white-space: nowrap;
 }
 .table-scroll {
   overflow-x: auto;
 }
 .market-table th {
-  font-size: 8px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 500;
   color: #74849b;
   padding: 23px 8px 12px;
   border-bottom: 1px solid #e9ecf2;
@@ -492,12 +492,12 @@
   gap: 9px;
 }
 .asset-cell strong {
-  font-size: 10px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   display: block;
 }
 .asset-cell small {
-  font-size: 8px;
+  font-size: 12px;
   color: #68778e;
   display: block;
   margin-top: 4px;
@@ -505,20 +505,20 @@
 .market-table .asset-icon {
   width: 32px;
   height: 32px;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 9px;
 }
 .market-table .asset-icon.gold,
 .market-table .asset-icon.silver {
-  font-size: 12px;
+  font-size: 16px;
 }
 .market-table .price {
-  font-size: 10px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   color: #111825;
 }
 .market-table .badge {
-  font-size: 7px;
+  font-size: 12px;
   padding: 4px 6px;
   background: #e8ecf244;
 }
@@ -526,7 +526,7 @@
   display: inline-flex;
   align-items: center;
   gap: 2px;
-  font-size: 8px;
+  font-size: 12px;
 }
 .watchlist {
   margin-top: 18px;
@@ -544,19 +544,19 @@
 .watchlist .asset-icon {
   width: 30px;
   height: 30px;
-  font-size: 17px;
+  font-size: 19px;
   border-radius: 9px;
 }
 .watchlist .asset-icon.gold {
-  font-size: 11px;
+  font-size: 15px;
 }
 .watchlist strong {
-  font-weight: 500;
-  font-size: 10px;
+  font-weight: 600;
+  font-size: 14px;
   display: block;
 }
 .watchlist small {
-  font-size: 8px;
+  font-size: 12px;
   display: block;
   color: #68778e;
   margin-top: 4px;
@@ -573,7 +573,7 @@
   margin: 10px -22px -22px;
   padding: 17px 0;
   color: #415573;
-  font-size: 8px;
+  font-size: 12px;
 }
 .watchlist-panel .empty-state {
   padding: 45px 10px;
@@ -602,24 +602,24 @@
   flex-shrink: 0;
 }
 .insight-banner .micro {
-  font-size: 6px;
+  font-size: 12px;
   letter-spacing: 1.4px;
   color: #566681;
 }
 .insight-banner h3 {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 19px;
+  font-weight: 600;
   margin-top: 8px;
 }
 .insight-banner p {
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.8;
   color: #5a6b83;
   margin-top: 6px;
 }
 .insight-banner > .button {
   margin-left: auto;
-  font-size: 8px;
+  font-size: 12px;
   padding: 10px 13px;
   min-height: 36px;
   gap: 10px;
@@ -634,7 +634,7 @@
   align-items: center;
   justify-content: space-between;
   color: #8495aa;
-  font-size: 8px;
+  font-size: 12px;
   gap: 20px;
 }
 .workspace-footer > span:nth-child(2) {
@@ -655,20 +655,20 @@
   align-items: center;
 }
 .market-summaries h3 {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
 .market-summaries h3 span {
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   color: #67768d;
   margin-top: 4px;
 }
 .market-summaries strong {
   grid-column: 1/-1;
   font-family: Manrope;
-  font-size: 23px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 600;
   margin-top: 5px;
 }
 .market-summaries .change {
@@ -691,7 +691,7 @@
   color: #4e5d74;
   padding: 8px 12px;
   border-radius: 6px;
-  font-size: 10px;
+  font-size: 14px;
 }
 .filter-tabs > button.selected {
   background: #e3e9f2;
@@ -713,7 +713,7 @@
   background: none;
   border: 0;
   padding: 9px 0;
-  font-size: 9px;
+  font-size: 12px;
   width: 130px;
 }
 .watchlist-controls {
@@ -729,7 +729,7 @@
   gap: 6px;
   border: 1px solid #e5e9f1;
   padding: 6px 9px;
-  font-size: 9px;
+  font-size: 12px;
 }
 .chip-button[aria-pressed="true"] {
   color: #c4a03b;
@@ -752,15 +752,15 @@
   align-items: center;
   justify-content: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 12px;
   color: #6d7e93;
   border-top: 1px solid #e7ebf2;
   padding-top: 18px;
   margin-top: 20px;
 }
 .order-panel h3 {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   margin-bottom: 24px;
 }
 .side-tabs {
@@ -774,7 +774,7 @@
 }
 .side-tabs button {
   flex: 1;
-  font-size: 11px;
+  font-size: 15px;
   background: transparent;
   border-radius: 4px;
   padding: 9px;
@@ -792,7 +792,7 @@
   flex-direction: column;
   gap: 17px;
   margin: 30px 0;
-  font-size: 9px;
+  font-size: 12px;
   color: #5d6c83;
 }
 .order-summary > span {
@@ -801,12 +801,12 @@
   gap: 10px;
 }
 .order-summary strong {
-  font-size: 9px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 500;
   color: #1a2434;
 }
 .order-panel .button {
-  font-size: 10px;
+  font-size: 14px;
   gap: 8px;
 }
 .settings-grid {
@@ -831,15 +831,15 @@
   border-radius: 50%;
   background: #e1e7f1;
   color: #05142e;
-  font-size: 22px;
+  font-size: 25px;
   flex-shrink: 0;
 }
 .profile-intro h3 {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
 }
 .profile-intro p {
-  font-size: 10px;
+  font-size: 14px;
   color: #5b6a80;
   margin-top: 7px;
 }
@@ -850,12 +850,12 @@
   margin-top: 20px;
 }
 .settings-form > .button {
-  font-size: 11px;
+  font-size: 15px;
   margin-top: 16px;
 }
 .settings-grid > .panel > h3 {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
 .detail-list {
   display: flex;
@@ -869,7 +869,7 @@
   align-items: center;
   gap: 10px;
   color: #4b5a71;
-  font-size: 11px;
+  font-size: 15px;
 }
 .security-setting {
   display: flex;
@@ -898,11 +898,11 @@
   flex-shrink: 0;
 }
 .security-setting h3 {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
 .security-setting p {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.9;
   color: #5c6b82;
   margin-top: 7px;
@@ -925,18 +925,18 @@
   border: 1px solid #8395b2;
   background: #e6ecf3;
   color: #1a6ce5;
-  font-size: 12px;
+  font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 .verification-preview h3 {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
 .verification-preview p {
-  font-size: 10px;
+  font-size: 14px;
   color: #5b697f;
   margin-top: 7px;
   line-height: 1.8;
@@ -956,14 +956,14 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 12px;
+  font-size: 16px;
   cursor: pointer;
   list-style: none;
   color: #3e72c1;
   line-height: 1.7;
 }
 .help-topics p {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.9;
   margin-top: 18px;
   color: #54637a;
@@ -973,11 +973,11 @@
   max-width: 650px;
 }
 .support-form h3 {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 19px;
+  font-weight: 600;
 }
 .support-form p {
-  font-size: 11px;
+  font-size: 15px;
   color: #1f2b3f;
   line-height: 1.8;
   margin-top: 15px;
@@ -990,7 +990,7 @@
   background: #5871a1;
   padding: 14px;
   border-radius: 8px;
-  font-size: 12px;
+  font-size: 16px;
 }
 .skip-link:focus {
   top: 12px;

@@ -61,3 +61,9 @@ body::after {
 .button:hover:not(:disabled) { background: linear-gradient(135deg, #4d88ff, #2a5be6); }
 .button-ghost, .google-button { background: rgba(255,255,255,.85); border: 1px solid #1f5fe0; box-shadow: none; }
 .panel, .card, .auth-card { border-radius: 20px; }
+
+/* Bolder, larger base text */
+body { font-size: 17px; font-weight: 500; }
+h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; }
+p, li, td, th, label, input, select, textarea, button, a { font-weight: 500; }
+strong, b { font-weight: 800; }
