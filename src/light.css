@@ -67,3 +67,6 @@ body { font-size: 17px; font-weight: 500; }
 h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; }
 p, li, td, th, label, input, select, textarea, button, a { font-weight: 500; }
 strong, b { font-weight: 800; }
+
+.doc-check { display: inline-flex; align-items: center; gap: 6px; margin: 6px 0 0; font-weight: 700; color: #51607f; }
+.doc-check.ok { color: #12a36b; }

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import type { FormEvent } from "react";
-import { LoaderCircle, Upload } from "lucide-react";
-import { supabase, errorMessage } from "../lib/client";
+import type { ChangeEvent, FormEvent } from "react";
+import { CheckCircle2, LoaderCircle, Upload } from "lucide-react";
+import { supabase, errorMessage, invoke } from "../lib/client";
 import { useAuth } from "../auth";
 
-async function prepare(file: File): Promise<File> {
+/** Resizes to a JPEG under 2 MB and returns it with its base64 text. */
+async function prepare(file: File): Promise<{ file: File; base64: string }> {
   if (
     !["image/jpeg", "image/png"].includes(file.type) ||
     file.size > 10 * 1024 * 1024
@@ -17,9 +18,13 @@ async function prepare(file: File): Promise<File> {
       Math.min(image.width, image.height) < 250
     )
       throw new Error("Use a clear document photo with readable details.");
-    if (Math.max(image.width, image.height) / Math.min(image.width, image.height) > 1.9)
+    if (
+      Math.max(image.width, image.height) /
+        Math.min(image.width, image.height) >
+      1.9
+    )
       throw new Error(
-        "This looks like a screenshot, not a photo of an ID card. Take a clear photo of the card.",
+        "This looks like a screenshot, not a photo of an ID card. Add a picture of your ID document.",
       );
     const scale = Math.min(1, 1600 / Math.max(image.width, image.height)),
       canvas = document.createElement("canvas");
@@ -43,15 +48,27 @@ async function prepare(file: File): Promise<File> {
     );
     if (blob.size > 2 * 1024 * 1024)
       throw new Error("This photo is too large. Choose a smaller image.");
-    return new File([blob], "document.jpg", { type: "image/jpeg" });
+    const base64 = await new Promise<string>((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(String(reader.result).split(",")[1] ?? "");
+      reader.onerror = () => reject(new Error("Could not read this image."));
+      reader.readAsDataURL(blob);
+    });
+    return { file: new File([blob], "document.jpg", { type: "image/jpeg" }), base64 };
   } finally {
     image.close();
   }
 }
+
+type Slot = { base64: string } | null;
+type Check = "idle" | "checking" | "ok";
+
 export function DocumentUpload() {
   const auth = useAuth();
-  const [front, setFront] = useState<File | null>(null),
-    [back, setBack] = useState<File | null>(null),
+  const [front, setFront] = useState<Slot>(null),
+    [back, setBack] = useState<Slot>(null),
+    [frontCheck, setFrontCheck] = useState<Check>("idle"),
+    [backCheck, setBackCheck] = useState<Check>("idle"),
     [type, setType] = useState("national_id"),
     [consent, setConsent] = useState(false),
     [busy, setBusy] = useState(false),
@@ -71,59 +88,59 @@ export function DocumentUpload() {
       setReason(typeof r === "string" ? r : "");
     });
   }, [auth.identity]);
+
+  /** Step 1: pre-scan. Only tells the user whether the picture is an ID document. */
+  async function pick(
+    event: ChangeEvent<HTMLInputElement>,
+    set: (v: Slot) => void,
+    setCheck: (c: Check) => void,
+  ) {
+    const input = event.target;
+    const chosen = input.files?.[0];
+    set(null);
+    setCheck("idle");
+    setError("");
+    setMessage("");
+    if (!chosen) return;
+    setCheck("checking");
+    try {
+      const prepared = await prepare(chosen);
+      const verdict = await invoke<{ available?: boolean; ok?: boolean; message?: string }>(
+        "check-document",
+        { image: prepared.base64, document_type: type },
+      ).catch(() => ({ available: false }) as { available?: boolean; ok?: boolean; message?: string });
+      if (verdict.available && verdict.ok === false) {
+        throw new Error(
+          verdict.message ||
+            "This does not look like an ID document. Add a picture of your ID document.",
+        );
+      }
+      set({ base64: prepared.base64 });
+      setCheck("ok");
+    } catch (e) {
+      input.value = "";
+      setCheck("idle");
+      setError(errorMessage(e));
+    }
+  }
+
+  /** Step 2: send it to the admin queue. */
   async function submit(event: FormEvent) {
     event.preventDefault();
     if (!front || !consent || busy || pending) return;
-    if (
-      back &&
-      back.name === front.name &&
-      back.size === front.size &&
-      back.lastModified === front.lastModified
-    ) {
-      setError(
-        "The front and back are the same picture. Choose the back of your ID in the second box, or leave it empty.",
-      );
-      return;
-    }
     setBusy(true);
     setError("");
     setMessage("");
     try {
-      if (!supabase) throw new Error("Please sign in again.");
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
-      if (!session) throw new Error("Please sign in again.");
-      const endpoint = new URL(
-        "/api/documents",
-        import.meta.env.VITE_ADMIN_URL || "http://127.0.0.1:8000",
-      );
-      if (
-        endpoint.protocol !== "https:" &&
-        !["127.0.0.1", "localhost"].includes(endpoint.hostname)
-      )
-        throw new Error("Secure document uploads require an HTTPS server.");
-      const body = new FormData();
-      body.append("document_type", type);
-      body.append("consent", "1");
-      body.append("front", await prepare(front));
-      if (back) body.append("back", await prepare(back));
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${session.access_token}`,
-          Accept: "application/json",
-        },
-        body,
-        signal: AbortSignal.timeout(150000),
+      await invoke("submit-document", {
+        document_type: type,
+        consent: true,
+        front: front.base64,
+        ...(back ? { back: back.base64 } : {}),
       });
-      const data = await response.json().catch(() => null);
-      if (!response.ok)
-        throw new Error(
-          data?.message || "Could not submit your document. Please retry.",
-        );
-      if (data.status === "rejected") setError(data.message);
-      else setMessage(data.message);
+      setMessage(
+        "Received. Your document is being checked, then an admin will review it.",
+      );
       await auth.refresh(true);
     } catch (e) {
       setError(errorMessage(e));
@@ -131,31 +148,17 @@ export function DocumentUpload() {
       setBusy(false);
     }
   }
-  async function withdraw() {
+  async function replace() {
     if (busy) return;
     setBusy(true);
     setError("");
     setMessage("");
     try {
-      if (!supabase) throw new Error("Please sign in again.");
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
-      if (!session) throw new Error("Please sign in again.");
-      const response = await fetch(
-        new URL(
-          "/api/documents",
-          import.meta.env.VITE_ADMIN_URL || "http://127.0.0.1:8000",
-        ),
-        {
-          method: "DELETE",
-          headers: {
-            Authorization: `Bearer ${session.access_token}`,
-            Accept: "application/json",
-          },
-        },
-      );
-      if (!response.ok) throw new Error("Could not remove your submission.");
+      await invoke("submit-document", { action: "replace" });
+      setFront(null);
+      setBack(null);
+      setFrontCheck("idle");
+      setBackCheck("idle");
       await auth.refresh(true);
     } catch (e) {
       setError(errorMessage(e));
@@ -163,11 +166,22 @@ export function DocumentUpload() {
       setBusy(false);
     }
   }
+  const badge = (c: Check) =>
+    c === "checking" ? (
+      <span className="doc-check">
+        <LoaderCircle className="spin" size={16} /> Checking…
+      </span>
+    ) : c === "ok" ? (
+      <span className="doc-check ok">
+        <CheckCircle2 size={16} /> ID document detected
+      </span>
+    ) : null;
   return (
     <div className="document-upload">
       <p className="document-limit">
-        Upload your national ID card, passport or driving licence. An admin
-        reviews it before your real account is unlocked.
+        Upload your national ID card, passport or driving licence. We check that
+        it is an ID, then an admin reviews it before your real account is
+        unlocked.
       </p>
       {["rejected", "admin_rejected"].includes(auth.identity) && (
         <p role="alert" className="form-error">
@@ -181,20 +195,18 @@ export function DocumentUpload() {
             {auth.identity === "verified"
               ? "Your document was approved."
               : auth.identity === "processing"
-                ? "Your document is being screened."
+                ? "Your document is being checked."
                 : "Your document is awaiting admin review."}
           </strong>
-          <p>
-            You can keep using the demo while you wait.
-          </p>
+          <p>You can keep using the demo while you wait.</p>
           {auth.identity !== "verified" && (
             <button
               type="button"
               className="button full"
               disabled={busy}
-              onClick={() => void withdraw()}
+              onClick={() => void replace()}
             >
-              Remove this and upload a different document
+              Replace document
             </button>
           )}
         </div>
@@ -220,9 +232,10 @@ export function DocumentUpload() {
             accept="image/jpeg,image/png"
             capture="environment"
             required
-            disabled={busy}
-            onChange={(event) => setFront(event.target.files?.[0] ?? null)}
+            disabled={busy || frontCheck === "checking"}
+            onChange={(e) => void pick(e, setFront, setFrontCheck)}
           />
+          {badge(frontCheck)}
           <label htmlFor="document-back">
             Document back (if your ID has one)
           </label>
@@ -231,9 +244,10 @@ export function DocumentUpload() {
             type="file"
             accept="image/jpeg,image/png"
             capture="environment"
-            disabled={busy}
-            onChange={(event) => setBack(event.target.files?.[0] ?? null)}
+            disabled={busy || backCheck === "checking"}
+            onChange={(e) => void pick(e, setBack, setBackCheck)}
           />
+          {badge(backCheck)}
           <label className="checkbox-label">
             <input
               type="checkbox"
@@ -241,16 +255,15 @@ export function DocumentUpload() {
               disabled={busy}
               onChange={(event) => setConsent(event.target.checked)}
             />
-            <span>
-              I agree to private document storage, local document-type
-              screening, and review by authorized Tradexa administrators.
-            </span>
+            <span>I agree to an admin reviewing my document.</span>
           </label>
-          <button className="button full" disabled={busy || !front || !consent}>
+          <button
+            className="button full"
+            disabled={busy || !front || !consent || frontCheck !== "ok"}
+          >
             {busy ? (
               <>
-                <LoaderCircle className="spin" size={18} /> Screening your
-                document...
+                <LoaderCircle className="spin" size={18} /> Sending…
               </>
             ) : (
               <>

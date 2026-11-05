@@ -41,6 +41,12 @@ export async function invoke<T>(
       } else if (error.context.status === 401) {
         message =
           "Your session could not be verified. Sign out and sign in again.";
+      } else if (
+        error.context.status >= 400 &&
+        error.context.status < 500 &&
+        typeof payload?.message === "string"
+      ) {
+        message = payload.message; // clear, user-facing reason from the server
       }
     }
     throw new Error(message);
