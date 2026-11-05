@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import type { ChangeEvent, FormEvent } from "react";
 import { CheckCircle2, LoaderCircle, Upload } from "lucide-react";
 import { supabase, errorMessage, invoke } from "../lib/client";
@@ -74,9 +75,10 @@ export function DocumentUpload() {
     [busy, setBusy] = useState(false),
     [message, setMessage] = useState(""),
     [error, setError] = useState("");
-  const pending = ["manual_review", "processing", "verified"].includes(
-    auth.identity,
-  );
+  const [submitted, setSubmitted] = useState(false);
+  const pending =
+    submitted ||
+    ["manual_review", "processing", "verified"].includes(auth.identity);
   const [reason, setReason] = useState("");
   useEffect(() => {
     if (!supabase || !["rejected", "admin_rejected"].includes(auth.identity)) {
@@ -138,9 +140,8 @@ export function DocumentUpload() {
         front: front.base64,
         ...(back ? { back: back.base64 } : {}),
       });
-      setMessage(
-        "Received. Your document is being checked, then an admin will review it.",
-      );
+      setSubmitted(true);
+      setMessage("");
       await auth.refresh(true);
     } catch (e) {
       setError(errorMessage(e));
@@ -148,18 +149,12 @@ export function DocumentUpload() {
       setBusy(false);
     }
   }
-  async function replace() {
-    if (busy) return;
+  async function checkStatus() {
     setBusy(true);
     setError("");
-    setMessage("");
     try {
-      await invoke("submit-document", { action: "replace" });
-      setFront(null);
-      setBack(null);
-      setFrontCheck("idle");
-      setBackCheck("idle");
       await auth.refresh(true);
+      setMessage("Status refreshed.");
     } catch (e) {
       setError(errorMessage(e));
     } finally {
@@ -194,21 +189,22 @@ export function DocumentUpload() {
           <strong>
             {auth.identity === "verified"
               ? "Your document was approved."
-              : auth.identity === "processing"
-                ? "Your document is being checked."
-                : "Your document is awaiting admin review."}
+              : "Submitted. Your document is being checked and then reviewed by an admin."}
           </strong>
-          <p>You can keep using the demo while you wait.</p>
-          {auth.identity !== "verified" && (
+          <p>An admin will review it. You can use the demo account while you wait.</p>
+          <div className="document-actions">
+            <Link className="button" to="/preview">
+              Use the demo account
+            </Link>
             <button
               type="button"
-              className="button full"
+              className="button button-ghost"
               disabled={busy}
-              onClick={() => void replace()}
+              onClick={() => void checkStatus()}
             >
-              Replace document
+              Check status
             </button>
-          )}
+          </div>
         </div>
       ) : (
         <form onSubmit={(event) => void submit(event)}>

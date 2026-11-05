@@ -70,3 +70,5 @@ strong, b { font-weight: 800; }
 
 .doc-check { display: inline-flex; align-items: center; gap: 6px; margin: 6px 0 0; font-weight: 700; color: #51607f; }
 .doc-check.ok { color: #12a36b; }
+
+.document-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
