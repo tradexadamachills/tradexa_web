@@ -1,0 +1,420 @@
+.auth-layout {
+  display: grid;
+  grid-template-columns: 43% 57%;
+  min-height: 100vh;
+}
+.auth-aside {
+  background:
+    radial-gradient(ellipse at 30% 40%, #23487855, transparent 65%), #f3f5fa;
+  padding: 45px 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #e9ecf3;
+  overflow: hidden;
+}
+.auth-message {
+  padding: 90px 0 50px;
+  position: relative;
+}
+.auth-message h1 {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -1.8px;
+  margin-top: 20px;
+}
+.auth-message > p {
+  font-size: 13px;
+  color: #2a3549;
+  line-height: 1.9;
+  max-width: 300px;
+  margin-top: 20px;
+}
+.auth-orbit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 240px;
+  border: 1px dashed #8699ab66;
+  border-radius: 50%;
+  margin: 60px auto 20px;
+  color: #263d4d;
+  position: relative;
+}
+.orbit-label {
+  position: absolute;
+  bottom: 10px;
+  right: -35px;
+  font-size: 10px;
+  background: #ecf1f6;
+  border: 1px solid #e1e7ee;
+  padding: 12px 17px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #202e37;
+}
+.auth-main {
+  padding: 36px 50px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #525d72;
+}
+.auth-form-wrap {
+  width: min(360px, 100%);
+  margin: auto;
+  padding: 55px 0;
+}
+.auth-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: #e9edf6;
+  border: 1px solid #8b9ebb;
+  color: #0055ff;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.auth-form-wrap h1 {
+  font-size: 30px;
+  letter-spacing: -1px;
+  font-weight: 500;
+  margin-bottom: 13px;
+}
+.auth-form-wrap > p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #303a4d;
+  margin-bottom: 28px;
+}
+.google-button {
+  background: #edf0f7;
+  border: 1px solid #e3e7ef;
+  color: #101724;
+  box-shadow: none;
+  font-size: 12px;
+}
+.google-button:hover:not(:disabled) {
+  background: #e7ecf3;
+}
+.google-g {
+  font-weight: 700;
+  font-size: 17px;
+  color: #061537;
+}
+.or-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 9px;
+  color: #717e91;
+  margin: 24px 0;
+}
+.or-divider > span {
+  height: 1px;
+  background: #e9edf3;
+  flex: 1;
+}
+.auth-form-wrap .auth-legal {
+  font-size: 9px;
+  line-height: 1.9;
+  color: #758195;
+  margin-top: 25px;
+}
+.auth-legal a {
+  color: #293547;
+}
+.auth-footer {
+  font-size: 9px;
+  color: #728093;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.otp-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+}
+.pin-dots {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 35px 0 28px;
+}
+.pin-dots > span {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #8a95aa;
+  border-radius: 50%;
+}
+.pin-dots > span.filled {
+  background: #004eff;
+  border-color: #004eff;
+}
+.pin-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+.pin-keypad > button {
+  height: 58px;
+  border-radius: 10px;
+  background: #eef1f8;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pin-keypad > button:nth-child(10) {
+  font-size: 11px;
+  color: #27354c;
+}
+.pin-keypad > button:hover {
+  background: #e6ebf3;
+}
+.auth-form-wrap > .text-button {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 10px;
+}
+.verification-layout {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 10%, #e6edf433, transparent 60%);
+}
+.verification-layout > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 40px;
+  border-bottom: 1px solid #eaedf3;
+}
+.verification-content {
+  width: min(590px, calc(100% - 40px));
+  margin: auto;
+  padding: 45px 0 80px;
+}
+.onboarding-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  font-size: 10px;
+  margin-bottom: 45px;
+}
+.onboarding-progress > span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.onboarding-progress .done {
+  color: #4f6b65;
+}
+.onboarding-progress .active {
+  color: #0c57f3;
+}
+.onboarding-progress i {
+  height: 1px;
+  width: 25px;
+  background: #e5e8ee;
+}
+.verification-heading {
+  margin-bottom: 28px;
+}
+.verification-heading > .auth-icon {
+  margin-bottom: 20px;
+}
+.verification-heading h1 {
+  font-size: 30px;
+  letter-spacing: -1px;
+  font-weight: 500;
+  margin: 10px 0 14px;
+}
+.verification-heading > p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #2e394b;
+  max-width: 580px;
+}
+.verification-status {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.verification-status > strong {
+  font-size: 12px;
+  font-weight: 500;
+}
+.verification-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 25px 0;
+}
+.verification-steps > div {
+  display: flex;
+  gap: 15px;
+}
+.verification-steps > div > span {
+  font-size: 11px;
+  color: #2064df;
+  flex-shrink: 0;
+  padding: 2px 0;
+}
+.verification-steps h3 {
+  font-size: 12px;
+  font-weight: 500;
+}
+.verification-steps p {
+  font-size: 10px;
+  color: #566377;
+  line-height: 1.8;
+  margin-top: 5px;
+}
+.checkbox-label {
+  display: flex;
+  align-items: start;
+  gap: 9px;
+  font-size: 10px;
+  line-height: 1.8;
+  margin: 28px 0 18px;
+}
+.checkbox-label > input {
+  width: 15px;
+  height: 15px;
+  accent-color: #0558fa;
+  margin: 2px 0;
+}
+.checkbox-label a {
+  color: #2a66d5;
+}
+.verification-card > .text-button {
+  display: block;
+  margin: 10px auto 0;
+}
+.verification-footnote {
+  font-size: 9px;
+  color: #6f7d91;
+  line-height: 1.9;
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+.contact-panel {
+  margin-top: 20px;
+}
+.contact-panel summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  list-style: none;
+}
+.contact-panel summary > span {
+  margin-left: auto;
+  color: #616e83;
+  font-size: 10px;
+}
+.contact-panel > p {
+  font-size: 10px;
+  color: #546074;
+  line-height: 1.9;
+  margin: 15px 0;
+}
+.contact-panel form > input {
+  margin-bottom: 15px;
+}
+
+.pin-dots {
+  position: relative;
+  min-height: 38px;
+  align-items: center;
+  border-radius: 9px;
+}
+.pin-dots:focus-within {
+  outline: 2px solid #004dff;
+  outline-offset: 8px;
+}
+.pin-dots .pin-keyboard-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: text;
+  margin: 0;
+}
+
+.document-upload {
+  margin: 26px 0;
+}
+.document-limit {
+  color: #202739;
+  font-size: 13px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+.document-upload label:not(.checkbox-label) {
+  display: block;
+  color: #3e6ac1;
+  margin: 18px 0 9px;
+  font-size: 12px;
+}
+.document-upload select,
+.document-upload input[type="file"] {
+  width: 100%;
+  border: 1px solid #e4e8f1;
+  border-radius: 9px;
+  padding: 13px;
+  background: #eff2f8;
+  color: #020711;
+  font: inherit;
+  font-size: 12px;
+}
+.document-upload input[type="file"]::file-selector-button {
+  border: 0;
+  padding: 8px 12px;
+  background: #244777;
+  color: white;
+  border-radius: 5px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.document-upload .checkbox-label {
+  margin: 22px 0;
+}
+.document-pending {
+  border: 1px solid #dbe3ee;
+  padding: 20px;
+  border-radius: 10px;
+  color: #05122b;
+}
+.document-pending p {
+  font-size: 12px;
+  color: #202739;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+.document-message {
+  color: #33cc8a;
+  line-height: 1.8;
+  font-size: 13px;
+  margin-top: 18px;
+}

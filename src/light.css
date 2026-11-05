@@ -1,0 +1,40 @@
+/* White + blue theme finishing touches. The other stylesheets are converted
+   from the old dark palette by tools/lighten_css.py; keep these overrides last. */
+:root {
+  --blue-strong: #1f5fe0;
+  --navy: #0b1b3f;
+}
+
+/* Primary buttons: white text on blue. */
+.button,
+.button:hover:not(:disabled) {
+  color: #fff;
+}
+.button-ghost,
+.button-ghost:hover:not(:disabled),
+.google-button,
+.google-button:hover:not(:disabled) {
+  color: var(--navy);
+}
+
+/* Blue call-to-action band so the page is a mix of white and blue. */
+.final-cta {
+  background: linear-gradient(135deg, #1f5fe0 0%, #0b2a7a 100%);
+  border-color: transparent;
+  color: #fff;
+}
+.final-cta h2,
+.final-cta p,
+.final-cta .eyebrow,
+.final-cta .text-link {
+  color: #fff;
+}
+.final-cta .button {
+  background: #fff;
+  color: var(--blue-strong);
+}
+
+.otp-boxes{display:flex;gap:10px;justify-content:center;margin:20px 0 6px}
+.otp-box{width:48px;height:56px;text-align:center;font-size:24px;font-weight:700;border-radius:12px;border:1px solid #dce4f2;background:#fff;color:var(--navy);padding:0}
+.otp-box:focus{outline:2px solid var(--blue-strong);border-color:var(--blue-strong)}
+.otp-box.invalid{border-color:#e0334f}
